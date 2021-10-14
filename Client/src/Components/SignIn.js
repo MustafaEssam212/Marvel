@@ -22,7 +22,7 @@ function SignIn(){
     const history = useHistory();
 
     function handleLogin(){
-        axios.post('http://localhost:5000/api/v1/login', {email, password})
+        axios.post(`${process.env.REACT_APP_API_URL}v1/login`, {email, password})
         .then(res => {
             if(res.data.message){
                 setMessage(res.data.message)

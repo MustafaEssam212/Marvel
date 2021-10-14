@@ -15,7 +15,7 @@ function RemoveProduct(){
     function handleRemoveProduct(e){
         e.preventDefault();
         
-        axios.post('http://localhost:5000/api/p1/removeproduct', {ProductNamee})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/removeproduct`, {ProductNamee})
         .then(res => {
             if(res.data.message === 'Product Deleted'){
                 setSuccess(res.data.message)

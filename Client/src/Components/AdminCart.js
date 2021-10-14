@@ -13,7 +13,7 @@ function AdminCart(){
     
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/o1/getallorders')
+        axios.get(`${process.env.REACT_APP_API_URL}o1/getallorders`)
         .then(res => {
             setOrders(res.data)
            
@@ -24,7 +24,7 @@ function AdminCart(){
     function handleChangeStatus(e){
         e.preventDefault();
        
-        axios.post('http://localhost:5000/api/o1/changeorderstatus', {Status, OrderId})
+        axios.post(`${process.env.REACT_APP_API_URL}o1/changeorderstatus`, {Status, OrderId})
     }
 
     return(
@@ -69,7 +69,7 @@ function AdminCart(){
                                         {
                                             item.Seen === 'No' ? <span onClick={()=>{
                                                 const OrderId = document.getElementById(item._id).id;
-                                                axios.post('http://localhost:5000/api/o1/changeorderseen', {OrderId})
+                                                axios.post(`${process.env.REACT_APP_API_URL}o1/changeorderseen`, {OrderId})
                                                 .then(res => {
                                                     if(res.data.message === 'Changed'){
                                                         

@@ -31,7 +31,7 @@ function MyProfile(){
         z.preventDefault();
         const data = new FormData();
         const email = UsContext.User.email;
-        axios.post('http://localhost:5000/api/v1/editprofile', {FirstName, LastName, Mobile, SecondMobile, Address, City, OldPassword, NewPassword, email})
+        axios.post(`${process.env.REACT_APP_API_URL}v1/editprofile`, {FirstName, LastName, Mobile, SecondMobile, Address, City, OldPassword, NewPassword, email})
         .then(res => {
             if(res.data.message === 'User Updated'){
                 setSuccess(res.data.message)

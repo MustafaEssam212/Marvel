@@ -15,7 +15,7 @@ function RemoveComment(){
 
     function handleFindComments(e){
         e.preventDefault();
-        axios.post('http://localhost:5000/api/p1/getcomments', {Find})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/getcomments`, {Find})
         .then(res =>{
             if(res.data.message === 'There is no product with this name'){
                 setMessage(res.data.message)
@@ -55,7 +55,7 @@ function RemoveComment(){
                         return <div key={key} id={element.CommentText} className="Comment ExsistCom">
                             <i onClick={()=>{
                                 const text = document.getElementById(element.CommentText).id;
-                                axios.post('http://localhost:5000/api/p1/deletecomment', {text, Find})
+                                axios.post(`${process.env.REACT_APP_API_URL}p1/deletecomment`, {text, Find})
                                 .then(res=>{
                                     if(res.data.message === 'Comment Deleted'){
                                         setSuccess(res.data.message)

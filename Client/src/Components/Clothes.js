@@ -7,7 +7,7 @@ import axios from "axios";
 function Clothes(){
   const [AllClothesProd, setAllClothesProd] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:5000/api/p1/getallclothesprod')
+    axios.get(`${process.env.REACT_APP_API_URL}p1/getallclothesprod`)
     .then(res=>{
         if(res.data.message){
             return

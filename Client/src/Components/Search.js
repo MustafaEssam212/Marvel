@@ -26,7 +26,7 @@ function Search(){
     const [Loading, setLoading] = useState(false);
 
     useEffect(()=>{
-        axios.post('http://localhost:5000/api/p1/search', {value})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/search`, {value})
         .then(res => {
             setResults(res.data)
             setLoading(false)

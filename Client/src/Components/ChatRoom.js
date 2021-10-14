@@ -21,14 +21,14 @@ function ChatRoom(){
 
     function handleSendMarvelMessage(s){
         s.preventDefault();
-        axios.post('http://localhost:5000/api/c1/sendmarvelmessage', {ChatMember, MyName, Message})
+        axios.post(`${process.env.REACT_APP_API_URL}c1/sendmarvelmessage`, {ChatMember, MyName, Message})
         .then(res => setVari(Math.random()))
         document.getElementById('textinput').value = ''
         
     }
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/c1/getchats')
+        axios.get(`${process.env.REACT_APP_API_URL}c1/getchats`)
         .then(res => setContacts(res.data))
         window.scrollTo(0, 0)
        
@@ -46,12 +46,12 @@ function ChatRoom(){
     
     
     useEffect(()=>{
-        axios.post('http://localhost:5000/api/c1/findspecificchat', {ChatMember})
+        axios.post(`${process.env.REACT_APP_API_URL}c1/findspecificchat`, {ChatMember})
         .then(res => setMessages(res.data))
     }, [ChatMember])
 
     useEffect(()=>{
-        axios.post('http://localhost:5000/api/c1/findspecificchat', {ChatMember})
+        axios.post(`${process.env.REACT_APP_API_URL}c1/findspecificchat`, {ChatMember})
         .then(res => setMessages(res.data))
     }, [vari])
 
@@ -62,7 +62,7 @@ function ChatRoom(){
     }, 30000)
 
     useEffect(()=>{
-        axios.post('http://localhost:5000/api/c1/findspecificchat', {ChatMember})
+        axios.post(`${process.env.REACT_APP_API_URL}c1/findspecificchat`, {ChatMember})
         .then(res => setMessages(res.data))
     }, [Time])
 

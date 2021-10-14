@@ -48,7 +48,7 @@ function AddProduct(){
         data.append('keywords', JSON.stringify(KeyWords))
         data.append('colors', JSON.stringify(Colors))
         data.append('sizes', JSON.stringify(Sizes))
-        axios.post('http://localhost:5000/api/p1/uploadthumbnail', data)
+        axios.post(`${process.env.REACT_APP_API_URL}p1/uploadthumbnail`, data)
         .then(res=>{
             if(res.data.message === "This Product's Name Already Exists"){
                 setMessage([...Message, {msg: res.data.message}])

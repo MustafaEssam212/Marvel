@@ -33,7 +33,7 @@ function Home(){
 
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/p1/getwomenshoes')
+        axios.get(`${process.env.REACT_APP_API_URL}p1/getwomenshoes`)
         .then(res =>{
             
             if(res.data.message){
@@ -42,7 +42,7 @@ function Home(){
                 setWomenShoes(res.data)
             }
         })
-        axios.get('http://localhost:5000/api/p1/getClothes')
+        axios.get(`${process.env.REACT_APP_API_URL}p1/getClothes`)
         .then(res =>{
             
             if(res.data.message){
@@ -51,7 +51,7 @@ function Home(){
                 setClothes(res.data)
             }
         })
-        axios.get('http://localhost:5000/api/p1/getmenshoes')
+        axios.get(`${process.env.REACT_APP_API_URL}p1/getmenshoes`)
         .then(res =>{
             
             if(res.data.message){

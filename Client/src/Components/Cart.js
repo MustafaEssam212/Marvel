@@ -13,7 +13,7 @@ function Cart(){
          const user = JSON.parse(localStorage.getItem('UserStorage'))
          const Email = user.email
          
-        axios.post('http://localhost:5000/api/o1/getorders', {Email})
+        axios.post(`${process.env.REACT_APP_API_URL}o1/getorders`, {Email})
         
         .then(res => {
             setOrders(res.data)

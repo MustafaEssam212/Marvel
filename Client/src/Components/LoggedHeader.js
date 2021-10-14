@@ -21,13 +21,13 @@ function LoggedHeader(){
     }
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/o1/notification')
+        axios.get(`${process.env.REACT_APP_API_URL}o1/notification`)
         .then(res => setNotification(res.data))
         
     }, [])
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/api/o1/notification')
+        axios.get(`${process.env.REACT_APP_API_URL}o1/notification`)
         .then(res => setNotification(res.data))
         
     }, [location.pathname])

@@ -33,7 +33,7 @@ function SignUp(){
         e.preventDefault();
      
         
-            axios.post('http://localhost:5000/api/v1/register', {firstname, lastname, email, password, confirmpassword, mobile, secondmobile, address, city})
+            axios.post(`${process.env.REACT_APP_API_URL}v1/register`, {firstname, lastname, email, password, confirmpassword, mobile, secondmobile, address, city})
         .then(res => {
             if(res.data.message === 'Email Already Taken'){
                 setMessages([{msg: res.data.message}])

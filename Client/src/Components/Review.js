@@ -33,7 +33,7 @@ function Review(){
 
     useEffect(()=>{
         setLoading(true)
-        axios.post('http://localhost:5000/api/p1/findproduct', {Find})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/findproduct`, {Find})
         .then(res => {
             setProduct([res.data])
             setLoading(false)
@@ -50,12 +50,12 @@ function Review(){
     function handleComment(e){
         e.preventDefault();
         const Name = UsContext.User.firstname + ' ' + UsContext.User.lastname;
-        axios.post('http://localhost:5000/api/p1/comment', {Comment, Name, Find})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/comment`, {Comment, Name, Find})
         .then(res =>{
             if(res.data.message === 'Comment Submited'){
                 document.getElementById('CommentInput').value = '';
                 history.push(`/Review/${Find}`)
-                axios.post('http://localhost:5000/api/p1/findproduct', {Find})
+                axios.post(`${process.env.REACT_APP_API_URL}p1/findproduct`, {Find})
                 .then(res => setProduct([res.data]))
             }else{
                 setMessage(res.data.message)

@@ -24,7 +24,7 @@ function Order(){
         if(!token){
             history.push('/SignUp')
         }
-        axios.post('http://localhost:5000/api/p1/findproduct', {Find})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/findproduct`, {Find})
         .then(res => {
             setProduct([res.data])
         })
@@ -49,7 +49,7 @@ function Order(){
         const SecondMobile =   UsContext.User.secondmobile;
         const City =   UsContext.User.city;
 
-        axios.post('http://localhost:5000/api/o1/order', {Find, Size, Color, Quantity, Email, Price, FirstName, LastName, Mobile, Address, SecondMobile, City})
+        axios.post(`${process.env.REACT_APP_API_URL}o1/order`, {Find, Size, Color, Quantity, Email, Price, FirstName, LastName, Mobile, Address, SecondMobile, City})
         .then(res=>{
             if(res.data.message === 'Error'){
                 setMessage(res.data.message)

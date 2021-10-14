@@ -16,20 +16,20 @@ function Chat(){
     const [vari, setVari] = useState(Math.random());
 
    useEffect(()=>{
-    axios.post('http://localhost:5000/api/c1/getmychat', {Email})
+    axios.post(`${process.env.REACT_APP_API_URL}c1/getmychat`, {Email})
     .then(res => setMessages(res.data))
     window.scrollTo(0, 0)
    }, [])
 
    useEffect(()=>{
-    axios.post('http://localhost:5000/api/c1/getmychat', {Email})
+    axios.post(`${process.env.REACT_APP_API_URL}c1/getmychat`, {Email})
     .then(res => setMessages(res.data))
 }, [vari])
 
 
     function handleSendMessage(s){
         s.preventDefault();
-        axios.post('http://localhost:5000/api/c1/sendmessage', {Message, UserName, Email})
+        axios.post(`${process.env.REACT_APP_API_URL}c1/sendmessage`, {Message, UserName, Email})
         .then(res => setVari(Math.random()))
         document.getElementById('textinput').value = ''
     }
@@ -52,7 +52,7 @@ function Chat(){
     }, 30000)
 
     useEffect(()=>{
-        axios.post('http://localhost:5000/api/c1/getmychat', {Email})
+        axios.post(`${process.env.REACT_APP_API_URL}c1/getmychat`, {Email})
         .then(res => setMessages(res.data))
     }, [Time])
 

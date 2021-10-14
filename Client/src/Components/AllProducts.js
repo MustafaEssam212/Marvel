@@ -10,7 +10,7 @@ function AllProducts() {
   const [AllMenProd, setAllMenProd] = useState([]);
   const [AllClothesProd, setAllClothesProd] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:5000/api/p1/getallwomenprod')
+    axios.get(`${process.env.REACT_APP_API_URL}p1/getallwomenprod`)
     .then(res=>{
         if(res.data.message){
             return
@@ -18,7 +18,7 @@ function AllProducts() {
           setAllWomenProd(res.data)
         }
     })
-    axios.get('http://localhost:5000/api/p1/getallmenprod')
+    axios.get(`${process.env.REACT_APP_API_URL}p1/getallmenprod`)
     .then(res=>{
         if(res.data.message){
             return
@@ -26,7 +26,7 @@ function AllProducts() {
           setAllMenProd(res.data)
         }
     })
-    axios.get('http://localhost:5000/api/p1/getallclothesprod')
+    axios.get(`${process.env.REACT_APP_API_URL}p1/getallclothesprod`)
     .then(res=>{
         if(res.data.message){
             return

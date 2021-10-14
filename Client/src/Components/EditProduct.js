@@ -45,7 +45,7 @@ function EditProduct(){
     function handleFindProduct(e){
         e.preventDefault();
         setLoading(true)
-        axios.post('http://localhost:5000/api/p1/findproduct', {Find})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/findproduct`, {Find})
         .then(res => {
             
             if(res.data.message){
@@ -82,7 +82,7 @@ function EditProduct(){
         data.append('ThreePics', Pic1)
         data.append('ThreePics', Pic2)
         data.append('ThreePics', Pic3)
-        axios.post('http://localhost:5000/api/p1/changeproductimages', data)
+        axios.post(`${process.env.REACT_APP_API_URL}p1/changeproductimages`, data)
         .then(res=>{
             if(res.data.message === 'Can not Update your product'){
                 setMessage2(res.data.message)
@@ -99,7 +99,7 @@ function EditProduct(){
         const sizes = JSON.stringify(Sizes)
 
         
-        axios.post('http://localhost:5000/api/p1/changeinfos', {keywords, colors, sizes, ProductName, Description, Price, Type})
+        axios.post(`${process.env.REACT_APP_API_URL}p1/changeinfos`, {keywords, colors, sizes, ProductName, Description, Price, Type})
         .then(res => {
             if(res.data.message === 'Can not Update your Product'){
                 setMessage(res.data.message)
