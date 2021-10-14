@@ -1,0 +1,89 @@
+
+.ContactContainer{
+    background-color: #E9EEF5;
+}
+.H24 h1{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.H24 h4{
+    font-family: 'Montserrat', sans-serif;
+}
+.H24{
+    text-align: center;
+    padding: 45px 0px 20px 0px;
+}
+
+.Methods{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.method{
+    box-shadow: 0px 0px 10px gray;
+    width: 400px;
+    text-align: center;
+    margin: 45px 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    background-color: white;
+
+    transition: .3s all;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+    height: 300px;
+}
+
+.method:hover  #III{
+    color: #6d0a0e;
+    transition: .3s all;
+    -webkit-transition: .3s all;
+    -moz-transition: .3s all;
+    -ms-transition: .3s all;
+    -o-transition: .3s all;
+}
+
+.method i{
+    font-size: 45px;
+    padding: 20px;
+    color: #41c55e;
+}
+
+
+.method h5{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Explain{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.Numb{
+    padding: 10px;
+    font-size: 17px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#Anchor{
+    font-size: 18px;
+    text-decoration: none;
+    color: #41c55e;
+}
+
+#Anchor i{
+    font-size: 25px;
+    padding: 0px 5px;
+    margin: 0px;
+}
+
+.Hours{
+    font-family: 'Noto Sans KR', sans-serif;
+}

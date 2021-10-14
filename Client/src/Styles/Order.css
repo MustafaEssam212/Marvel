@@ -1,0 +1,86 @@
+.OrderH1{
+    
+    font-family: 'Bebas Neue', cursive;
+    padding: 25px;
+}
+.OrderH1 span{
+    color: #E73436;
+}
+
+.OrderContainer{
+    background-color: #E9EEF5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Alerts{
+    padding-bottom: 25px;
+}
+
+.OrderBox{
+    background-color: white;
+    width: 600px;
+    box-shadow: 0px 0px 8px gray;
+    margin: 0px 10px 25px 10px;
+    padding: 25px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ProductNamePriceDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.ProName{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.NewSelect{
+    margin-top: 25px;
+    margin: 25px 5px 5px 5px;
+}
+
+.Selectors{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.OrBtn{
+    margin: 15px 0px 0px 0px;
+}
+@media(max-width: 600px){
+    .OrderBox{
+        width: 500px;
+    }
+    .Selectors{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 500px){
+    .OrderBox{
+        width: 400px;
+    }
+}
+
+@media(max-width: 400px){
+    .OrderBox{
+        width: 300px;
+    }
+}
+
+@media(max-width: 300px){
+    .OrderBox{
+        width: 200px;
+    }
+}

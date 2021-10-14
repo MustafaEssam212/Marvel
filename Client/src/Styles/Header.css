@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gudea&display=swap');
+
+.HeaderContent{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    align-items: center;
+    background-color: white;
+   z-index: 1000;
+}
+
+
+.HeaderImgLogo{
+    height: 75px;
+    width: 120px;
+    padding-left: 15px;
+}
+
+
+.HeaderList ul {
+    display: flex;
+    list-style: none;
+}
+
+.HeaderList ul li{
+    margin: 0px 40px;
+   font-size: 19px;
+   padding-top: 10px;
+}
+
+.HeaderList ul li a{
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -ms-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.HeaderList ul li a:hover{
+    color: #EC1D24;
+}
+
+.HeaderReg a{
+    text-decoration: none;
+    border: 1px solid #59AB6E;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-family: 'Gudea', sans-serif;
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.HeaderReg i {
+    color: #cdd4e3;
+    padding-right: 3px;
+}
+
+
+.Bars i{
+    font-size: 22px;
+    margin-right: 15px;
+    
+}
+
+
+.Bars{
+    display: none;
+    cursor: pointer;
+    
+}
+
+
+.LoggedHeaderReg a{
+    text-decoration: none;
+    padding: 10px 5px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.LoggedHeaderReg i {
+    color: #cdd4e3;
+    padding-right: 3px;
+    font-size: 23px;
+}
+
+.Notification{
+    position: absolute;
+    top: -5px;
+    right: -2px;
+    background-color: red;
+    padding: 0px 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+
+.LogOut{
+    border: none;
+    outline: none;
+    background-color: transparent;
+   
+}
+
+
+
+#Btnn{
+    outline: none;
+}
+
+
+@keyframes UlAnimate {
+  from{
+    right: -215px;
+  }to{
+    right: 0;
+  }
+}
+
+@media (max-width: 920px){
+    .Bars{
+        display: block;
+    }
+    .fa-times-circle{  
+        margin-left: 155px;
+    }
+    
+  
+    .HeaderList{
+        display: none;
+    }
+    .NewHeaderList ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 80px;
+        right: -215px;
+        background-color: white;
+        font-size: 18px;
+        list-style: none;
+        border-bottom-left-radius: 25px;
+        -webkit-box-shadow: -1px 2px 5px -1px rgba(0,0,0,0.75);
+        -moz-box-shadow: -1px 2px 5px -1px rgba(0,0,0,0.75);
+        box-shadow: -1px 2px 5px -1px rgba(0,0,0,0.75);
+        animation: UlAnimate .5s linear forwards;
+        -webkit-animation: UlAnimate .5s linear forwards;
+}
+.NewHeaderList ul li{
+   padding: 20px;
+   margin-right: 35px;
+}
+    .NewHeaderList ul li a{
+        font-family: 'Noto Sans TC', sans-serif;
+        text-decoration: none;
+        color: black;
+        transition: .3s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        -moz-transition: .3s ease-in-out;
+        -ms-transition: .3s ease-in-out;
+        -o-transition: .3s ease-in-out;
+    }
+    .NewHeaderList ul li a:hover{
+        color: #EC1D24;
+    }
+}
+
+@media (max-width: 659px) {
+    
+    .fa-times-circle{  
+        margin-left: 105px;
+    }
+}
+
+
+
+@media (max-width: 400px){
+    .fa-times-circle{  
+        margin-left: 0px;
+    }
+    .HeaderImgLogo{
+        height: 70px;
+        width: 90px;
+        padding-left: 10px;
+    }
+    .Bars i{
+        font-size: 20px;
+        margin-right: 10px;
+        
+    }
+    .HeaderReg a{
+        padding: 8px;
+        margin-right: 8px;
+        font-size: 14px;
+}
+}
+
+@media (max-width: 300px){
+    .HeaderImgLogo{
+        height: 40px;
+        width: 60px;
+        padding-left: 5px;
+    }
+    .Bars i{
+        font-size: 18px;
+        margin-right: 8px;
+        
+    }
+    .HeaderReg a{
+        padding: 7px;
+        margin-right: 6px;
+        font-size: 11px;
+}
+.HeaderContent{
+    height: 50px;
+}
+.NewHeaderList ul{
+    top: 50px;
+    font-size: 16px;
+}
+.NewHeaderList ul li{
+    padding: 15px;
+    margin-right: 25px;
+ }
+}
+
+
+@media(max-width: 250px){
+    .HeaderImgLogo{
+        height: 40px;
+        width: 50px;
+        padding-left: 5px;
+    }
+    .Bars i{
+        font-size: 17px;
+        margin-right: 8px;
+        
+    }
+    .HeaderReg a{
+        padding: 5px;
+        margin-right: 6px;
+        font-size: 10px;
+}
+}

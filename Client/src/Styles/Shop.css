@@ -1,0 +1,238 @@
+
+.Shop2Header{
+    background-color: #212934;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Shop2Header form input{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    height: 35px;
+}
+
+.Shop2Header form{
+    padding-left: 25px;
+}
+
+.Shop2Header form input::placeholder{
+    padding-left: 13px;
+}
+
+.Categories{
+    padding-right: 55px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Categ{
+    height: 35px;
+    outline: none;
+    border: none;
+}
+
+.Shop2Header form i{
+    color: white;
+    padding-left: 7px;
+    font-size: 20px;
+}
+
+.Shop2Header form button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.WomenProducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.WomenShoesDiv{
+    background-color: #E9EEF5;
+}
+
+.WomenShoesDiv h1{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.MenProducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.MenShoesDiv{
+    background-color: #E9EEF5;
+}
+
+.MenShoesDiv h1{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.ClothesProducts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ClothesDiv{
+    background-color: #E9EEF5;
+}
+
+.ClothesDiv h1{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.DropMenu{
+    padding-right: 25px;
+    position: relative;
+}
+
+
+.DropMenu button{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid #5c626b;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: white;
+    background-color: transparent;
+    width: 185px;
+}
+
+
+
+.DropMenu button i{
+    padding-left: 5px;
+}
+
+.ShopUl{
+    display: none;
+}
+
+.VisibleUl{
+    list-style: none;
+    position: absolute;
+    top: 43px;
+    text-align: center;
+    background-color: #212934;
+    padding: 10px 28px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+}
+
+.VisibleUl li a{
+    color: white;
+    text-decoration: none;
+}
+
+.VisibleUl li{
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 10px;
+}
+
+.ProHr{
+    
+    margin: 30px 80px 0px 80px;
+   
+}
+
+@media (max-width: 500px) {
+    .Shop2Header form{
+        padding-left: 5px;
+    }
+    .Shop2Header form i{
+        font-size: 18px;
+    }
+    .Shop2Header form input{
+        width: 180px;
+    }
+    .DropMenu{
+        padding-right: 5px;
+    }
+  
+}
+
+@media (max-width: 413px) {
+    .VisibleUl{
+        padding: 10px 17px;
+        top: 40px;
+    }
+    .VisibleUl li{
+        font-size: 14px;
+    }
+    .DropMenu button{
+        font-size: 12px;
+        width: 150px;
+    }
+    .Shop2Header form input{
+        width: 150px;
+    }
+    .Shop2Header form i{
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 343px){
+    .VisibleUl{
+        padding: 10px 10px;
+        top: 39px;
+        z-index: 5;
+    }
+    .VisibleUl li{
+        font-size: 13px;
+    }
+    .DropMenu button{
+        font-size: 10px;
+        width: 120px;
+    }
+    .Shop2Header form input{
+        width: 130px;
+        height: 30px;
+    }
+    .Shop2Header form i{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 300px){
+    .VisibleUl{
+        padding: 10px 9px;
+        top: 38px;
+        z-index: 5;
+    }
+    .VisibleUl li{
+        font-size: 12px;
+        width: 100px;
+    }
+    .DropMenu button{
+        font-size: 9px;
+    }
+    .Shop2Header form input{
+        width: 110px;
+        height: 28px;
+    }
+    .Shop2Header form i{
+        font-size: 14px;
+    }
+}

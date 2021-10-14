@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.InfoContent{
+    height: 40px;
+    background-color: #212934;
+    color: #cdd4e3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+.Phones{
+    display: flex;
+}
+
+.Phone{
+    margin-right: 30px;
+}
+
+.Phone i{
+    padding-right: 3px;
+}
+
+.Socials{
+    font-size: 20px;
+  
+}
+
+.Socials a{
+    text-decoration: none;
+    color: #cdd4e3;
+    margin: 0px 10px;
+}
+
+
+@media(max-width: 410px){
+    .Phone{
+        margin-right: 8px;
+        font-size: 13px;
+    }
+    .Socials{
+        font-size: 13px;
+    }
+    .Socials a{
+        margin: 0px 5px;
+    }
+}
+
+
+
+
+@media(max-width: 278px){
+    .Phone{
+        margin-right: 5px;
+        font-size: 10px;
+    }
+    .Socials{
+        font-size: 10px;
+    }
+    .Socials a{
+        margin: 0px 5px;
+    }
+    .Phone i{
+        padding-right: 0px;
+    }
+}

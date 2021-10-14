@@ -1,0 +1,135 @@
+
+.SignUpContainer{
+    background-color: #E9EEF5;
+}
+
+.FormInside{
+    display: flex;
+    justify-content: center;
+}
+
+.SignUpContainer h3{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.SignUpContainer h3 span{
+    color: #EC1D24;
+}
+
+.SignUpForm{
+    width: 500px;
+    background-color: white;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.123);
+}
+
+.NameRegister{
+    display: flex;
+    padding: 0px 25px;
+    margin: 25px 0px;
+}
+
+.NameRegister input{
+    margin: 0px 5px 0px 5px;
+}
+
+.NameRegister input::placeholder , .AnotherInputs input::placeholder{
+    font-size: 14px;
+}
+
+
+.AnotherInputs{
+    padding: 0px 25px;
+    margin: 0px 5px 0px 5px;
+}
+
+.AnotherInputs input{
+    margin: 25px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Select{
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    outline: none;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Notice{
+    padding: 15px 0px 0px 25px;
+}
+
+.Notice span{
+    color: red;
+}
+
+.RegisterBtn{
+   padding: 0px 25px 20px 25px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.HaveAccount{
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.HaveAccount a{
+    text-decoration: none;
+}
+
+.AlertBox{
+    background-color: rgb(201, 26, 26);
+    margin: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.AlertBox ul li{
+    padding: 15px;
+}
+
+.NoSuccess{
+    display: none;
+}
+.SuccessBox{
+    background-color: rgb(12, 146, 46);
+    margin: 10px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.SuccessBox ul li{
+    padding: 15px;
+}
+.SuccessBox a{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 500px) {
+    .SignUpForm{
+        width: auto;
+        margin: 0px 15px;
+    }
+    input::placeholder{
+        font-size: 13px;
+        
+    }
+}

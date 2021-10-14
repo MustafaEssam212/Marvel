@@ -1,0 +1,24 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.AboutInformation h1{
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.FirstP{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 0px 25px 25px 25px;
+}
+
+.Question{
+    font-family: 'Anton', sans-serif;
+    font-size: 23px;
+    padding: 0px 25px;
+}
+
+.Answer{
+    font-family: 'Montserrat', sans-serif;
+}

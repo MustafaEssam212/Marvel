@@ -1,0 +1,46 @@
+.FlexCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.H1Profile{
+        color: #E13334;
+        font-family: 'Bebas Neue', cursive;
+        text-align: center;
+        padding: 25px 0px;
+}
+
+.first-last-name{
+    display: flex;
+}
+
+.first-last-name input{
+    margin: 0px 2px 0px 2px;
+}
+
+.EditProfileDiv{
+    width: 500px;
+    background-color: #E9EEF5;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin: 25px 10px;
+}
+
+
+.AllInputs input{
+    margin-top: 15px;
+}
+
+.AllInputs{
+    padding: 15px;
+}
+
+
+.AllInputs select{
+    margin-top: 15px;
+}
