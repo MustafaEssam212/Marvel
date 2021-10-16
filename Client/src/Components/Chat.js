@@ -55,7 +55,7 @@ function Chat(){
         axios.post(`${process.env.REACT_APP_API_URL}c1/getmychat`, {Email})
         .then(res => setMessages(res.data))
     }, [Time])
-
+    
     return(
         <div className="ChatContainer">
 
